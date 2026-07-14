@@ -15,8 +15,8 @@ Easily import Swisstopo LTOP coordinate files (`.koo`) as point layers into QGIS
 | Category | Location in QGIS |
 | :--- | :--- |
 | **Processing Toolbox** | `Scripts` ➡️ `LTOP Formate` ➡️ `LTOP-KOO Importieren` |
-| **Main Menu** | `QGeoProcessing` (Extended Installation) |
-| **Quick Access** | Can be added directly to the `Processing Toolbar` (Extended Installation) |
+| **Main Menu** | `QGeoProcessing` [Extended Installation](#️-extended-installation-optional) |
+| **Quick Access** | Can be added directly to the `Processing Toolbar` [Extended Installation](#️-extended-installation-optional) |
 
 ---
 
@@ -37,7 +37,7 @@ To quickly access the processing plugins in the main menu and the ```Processing 
 1. Navigate: ```Settings``` ➡️ ```Options``` ➡️ ```Menus``` ➡️ ```Scripts``` ➡️ ```[Algorithm-Name]```
 2. Under ```Menu path``` enter ```QGeoProcessing``` which results in a new Menu in the Menu Bar
 3. Enable the option ```Add button in toolbar``` to show the algorithm in the processing toolbar
-4. Store the icon under ```C:/Users/[user]/AppData/Roaming/QGIS/QGIS3/profiles/default/processing/scripts/icons/[algorithm].png```
+4. Store the [icon](./icons/) under ```C:/Users/[user]/AppData/Roaming/QGIS/QGIS3/profiles/default/processing/scripts/icons/[algorithm].png```
 5. Under ```Icon``` set the path to the icon (Step 4.)
 6. Restart the application for the changes to appear
 ---
