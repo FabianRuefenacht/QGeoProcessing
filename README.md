@@ -7,9 +7,8 @@
 ## 🚀 Featured Tools
 
 ### 📍 LTOP-KOO Importer (`importKOO.py`)
-Easily import Swisstopo LTOP coordinate files (`.koo`) as high-precision point layers into QGIS.
+Easily import Swisstopo LTOP coordinate files (`.koo`) as point layers into QGIS. Only coordinates in the Swiss LV95 system (EPSG:2056) are supported.
 
-*   **Automatic CRS Support:** Automatically handles coordinates in the Swiss LV95 system (EPSG:2056).
 *   **Rich Attributes:** Imports and structures all additional geodetic attributes (epochs, heights, map sheets, geoid separations, etc.) into the attribute table.
 *   **Menu Integration:** Once activated, the tool is fully integrated into the QGIS interface.
 
