@@ -29,7 +29,7 @@ class ImportLtopKoo(QgsProcessingAlgorithm):
 
     # Add Tool to Toolbar
     def mainMenuCommand(self):
-        return 'vector' # in menu "Vector"
+        return 'QGeoProcessing' # in menu "QGeoProcessing"
 
     def shortHelpString(self):
         return 'Dieses Skript importiert Swisstopo LTOP-KOO Dateien (.koo) als LV95-Punktlayer.'
