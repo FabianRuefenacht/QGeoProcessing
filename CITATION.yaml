@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+authors:
+  - family-names: "Rüfenacht"
+    given-names: "Fabian"
+title: "QGeoProcessing: QGIS Processing Tools for Geodetic Networks"
+version: "1.0.0"
+date-released: "2026-07-14"
+url: "https://github.com/FabianRuefenacht/QGeoProcessing"
