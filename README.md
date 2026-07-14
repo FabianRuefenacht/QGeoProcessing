@@ -38,3 +38,21 @@ Adding the scripts to QGIS is quick and straightforward:
 
 * **QGIS** 3.x or 4.x
 * **Python** 3.x (included with your QGIS installation)
+
+---
+
+## 🎓 Citation
+
+If you use **QGeoProcessing** or any of its tools (like `importKOO.py`) in an academic publication, thesis, or report, please cite it as follows:
+
+### BibTeX
+```bibtex
+@software{qgeoprocessing2026,
+  author       = {Rüfenacht, Fabian},
+  title        = {QGeoProcessing: QGIS Processing Tools for Geodetic Networks},
+  year         = {2026},
+  version      = {1.0.0},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{[https://github.com/FabianRuefenacht/QGeoProcessing](https://github.com/FabianRuefenacht/QGeoProcessing)}}
+}
