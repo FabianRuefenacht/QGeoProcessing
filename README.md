@@ -14,7 +14,7 @@ Easily import Swisstopo LTOP coordinate files (`.koo`) as point layers into QGIS
 
 | Category | Location in QGIS |
 | :--- | :--- |
-| **Processing Toolbox** | `Scripts` ➡️ `LTOP Formate` ➡️ `LTOP-KOO Importieren` |
+| **Processing Toolbox** | `Scripts` ➡️ `LTOP Formate` ➡️ `LTOP-KOO Importer` |
 | **Main Menu** | `QGeoProcessing` [Extended Installation](#️-extended-installation-optional) |
 | **Quick Access** | Can be added directly to the `Processing Toolbar` [Extended Installation](#️-extended-installation-optional) |
 
