@@ -107,6 +107,12 @@ class SelectFromPtAlgorithm(QgsProcessingAlgorithm):
     def flags(self):
         return super().flags() | QgsProcessingAlgorithm.FlagNoThreading
 
+    def shortHelpString(self):
+        return '''Dieses Skript exportiert Nivellement-Messungen aus einem Layer direkt in das von LTOP lesbare *.mes-Format.
+        
+        Als Input wird ein Layer erwartet, welcher die Attribute ```FromPt```, ```ToPt```, ```DeltaH``` und ```StdDH``` enthält. Nach dem Ausführen werden Sie aufgefordert, ```Points of Interest``` auszuwählen - wählen Sie hier alle Punkte, welche nicht einfache ```Umsteller``` sind.
+        Eine detailliertere Beschreibung des Algorithmus finden Sie hier: https://github.com/FabianRuefenacht/QGeoProcessing#-ltop-niv-exporter-exportnivpy'''
+
     def initAlgorithm(self, config=None):
         # (merged) Niv-lines
         self.addParameter(

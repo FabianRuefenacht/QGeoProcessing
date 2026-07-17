@@ -31,7 +31,10 @@ class importNIV(QgsProcessingAlgorithm):
         return 'QGeoProcessing'
 
     def shortHelpString(self):
-        return 'Dieses Skript importiert Nivellement-Messungen aus einer CSV-Datei und zeichnet Linien zwischen den Punkten.'
+        return '''Dieses Skript importiert Nivellement-Messungen aus einer CSV-Datei und zeichnet Linien zwischen den Punkten.
+        
+        Erwartet wird eine Datei, welche aus PunktIDs, Rückblicken, Vorblicken, Zwischenblicken, Höhenkorrekturen, Näherungswerten für Ost, Nord und Höhe, sowie den Standardabweichungen der jeweiligen Ablesungen enthält.
+        Eine solche Datei kann beispielsweise direkt von Leica Infinity exportiert werden. Eine detailliertere Beschreibung des erwarteten Formats finden Sie hier: https://github.com/FabianRuefenacht/QGeoProcessing/tree/main#-infinity-niv-importer-importnivpy'''
 
     def initAlgorithm(self, config=None):
         self.addParameter(
