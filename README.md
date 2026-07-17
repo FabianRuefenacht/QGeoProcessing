@@ -87,6 +87,8 @@ The whole export requires three steps:
 3. **Points of Interest:** After confirming steps 1 & 2, you'll be prompted to select the points of interest. This defines, the observations which will be written to the ```*.MES-File```.
     > ⚠️ **Attention:** Select all points which were not simply used as a changeover point. Else, the observations might not be computed correctly.
 
+> 💡 **Tip:** It is highly advised to use [Infinity-NIV Importer](https://github.com/FabianRuefenacht/QGeoProcessing/tree/main#-infinity-niv-importer-importnivpy) and the there documented processing steps to create the ```Input Layer```.
+
 | Category | Location in QGIS |
 | :--- | :--- |
 | **Processing Toolbox** | `Scripts` ➡️ `LTOP Formate` ➡️ `LTOP-NIV Exporter` |
