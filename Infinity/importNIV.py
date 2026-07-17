@@ -6,14 +6,14 @@ from qgis.PyQt.QtGui import QIcon, QPixmap
 import os
 import csv
 
-class ImportLtopKoo(QgsProcessingAlgorithm):
+class importNIV(QgsProcessingAlgorithm):
     FILE_INPUT = 'INPUT'
 
     def tr(self, string):
         return string
 
     def createInstance(self):
-        return ImportLtopKoo()
+        return importNIV()
 
     def name(self):
         return 'import_infinity_niv'

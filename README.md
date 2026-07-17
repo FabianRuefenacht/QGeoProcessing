@@ -27,7 +27,7 @@ Quickly import CSV-files containing Levelling data, for example exported from Le
 *   **Incorporated Standard Deviation:** The standard deviation of an observation, if provided, are kept for further processing.
 *   **Graphical Representation of Levelling Lines:** Levelling lines are drawn in the QGIS map canvas.
 
-The CSV-File must be provided in the following format. The two introductory lines are mandatory, allthough they are ignored. The columns must be separated with a semicolon (```;```), and the order of the columns is given. Additional columns can be vorhanden after the standard deviation ```std```, however, they are ignored.
+The CSV-File must be provided in the following format. The two introductory lines are mandatory, allthough they are ignored. The columns must be separated with a semicolon (```;```), and the order of the columns is given.
 
 ```CSV
 sep=;
@@ -55,9 +55,41 @@ sep=;
 "U7";"";"-";"-";"-";"-";"-";"2681533.29169";"1224558.80569";"415.04917";"-"
 ```
 
+> 💡 **Tip 1:** If multiple levelling lines are imported, they can be concatenated using the ```Merge Vector Layers``` Tool, provided by QGIS.
+
+> 💡 **Tip 2:** To retain the information about which line the observations are from, open the attribute table of the merged file (Tip 1), create a new attibute "Comment" and use the following command: ``` regexp_replace( "layer", '.csv', '')```
+
 | Category | Location in QGIS |
 | :--- | :--- |
 | **Processing Toolbox** | `Scripts` ➡️ `Infinity Formate` ➡️ `Infinity-KOO Importer` |
+| **Main Menu** | `QGeoProcessing` [Extended Installation](#️-extended-installation-optional) |
+| **Quick Access** | Can be added directly to the `Processing Toolbar` [Extended Installation](#️-extended-installation-optional) |
+---
+
+### 📍 LTOP-NIV Exporter (`exportNIV.py`)
+Quickly compute levelling observations for LTOP and export them in the *.MES-format.
+
+*   **Easy Point Handling:** Points of Interest (Control & New Points) can be selected using Check Boxes.
+*   **Automatic Observation Computation:** Height differences between points of interest are automatically computed from the selected layer.
+*   **Structured File Support:** Retain levelling-line information if available as the attribute ```Comment```.
+*   **Interim Observations:** Interim observations are supported as well.
+
+The whole export requires three steps:
+
+1.  **Input Layer:** Define the input layer with at least the following attributes:
+    * ```FromPt``` ➡️ Point name of the observation's backsight
+    * ```ToPt``` ➡️ Point name of the observation's foresight
+    * ```DeltaH``` ➡️ Measured height difference
+    * ```StdDH``` ➡️ Standard deviation of the measurement
+    * (optionally) ```Comment``` ➡️ Name of the line the observation belongs to
+    > ⚠️ **Attention:** The algorithm assumes the observations are in order of acquisition. If this is not the case, the computed observations might be incorrect.
+2. **Output Path:** Path and name where the resulting ```*.MES-File``` will be stored
+3. **Points of Interest:** After confirming steps 1 & 2, you'll be prompted to select the points of interest. This defines, the observations which will be written to the ```*.MES-File```.
+    > ⚠️ **Attention:** Select all points which were not simply used as a changeover point. Else, the observations might not be computed correctly.
+
+| Category | Location in QGIS |
+| :--- | :--- |
+| **Processing Toolbox** | `Scripts` ➡️ `LTOP Formate` ➡️ `LTOP-NIV Exporter` |
 | **Main Menu** | `QGeoProcessing` [Extended Installation](#️-extended-installation-optional) |
 | **Quick Access** | Can be added directly to the `Processing Toolbar` [Extended Installation](#️-extended-installation-optional) |
 
